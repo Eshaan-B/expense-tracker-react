@@ -1,3 +1,4 @@
+import ExpenseDate from "./ExpenseDate";
 import "./ExpenseItem.css";
 
 function ExpenseItem(props) {
@@ -7,12 +8,8 @@ function ExpenseItem(props) {
 
   return (
     <div className="expense-item">
-      <div className="datebox">
-        <div className="month">{month}</div>
-        <div className="year">{year}</div>
-        <div className="date">{day}</div>
-      </div>
       <div className="expense-item__description">
+        <ExpenseDate month={month} day={day} year={year} />
         <h2>{props.title}</h2>
         <div className="expense-item__price">${props.amount}</div>
       </div>
